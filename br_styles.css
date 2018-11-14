@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 4
+   Case Problem 4
+   
+   Browyer Realty Layout Styles
+    Author: Jacob Gordon
+    Date:   11/13/18
+	
+   Filename: br_styles.css
+
+*/
+/* Structure of the page */
+/* Sets the background */
+html {
+    background-image: url(br_paper.png);
+    height: 100%;
+}
+
+body {
+    background-color: rgb(255, 211, 154);
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    max-width: 960px;
+    min-width: 360px;
+    height: 100%;
+
+}
+
+/* Header Structure */
+
+
+body>header {
+    background: url(br_logo.png) no-repeat center/100%;
+}
+
+header>nav>ul>li {
+    display: block;
+    float: left;
+    width: 20%;
+    background-color: rgb(228, 203, 170);
+    text-align: center;
+
+}
+
+header nav ul li a:link,
+header nav ul li a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+header nav>ul li a:hover,
+header nav ul li a:active {
+    background-color: red;
+}
+
+section {
+    text-align: center;
+    width: 20%;
+    float: left;
+    margin-top: 50px;
+    background: red;
+    border-radius: 25px;
+    box-shadow: 10px 10px 20px;
+}
