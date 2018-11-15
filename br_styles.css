@@ -25,11 +25,17 @@ body {
     margin-left: auto;
     width: 80%;
     height: 100%;
-
+position: relative;
 }
 
 /* Header Structure */
+header{
+    background: white;
+}
 
+header img{
+    width:100%
+}
 
 header>nav>ul>li {
     background-color: rgb(228, 203, 170);
@@ -48,18 +54,14 @@ header nav ul a:visited {
     color: black;
 }
 
-header nav a:hover,
-header nav a:active {
-    background-color: red;
-}
 
 /* Aside Struction */
-Aside#listing {
+aside#listing {
     display: block;
     text-align: center;
     width: 20%;
     float: left;
-    margin: 50px 100px 0px 20px;
+    margin: 30px 50px 0px 20px;
     background: rgb(255, 197, 122);
     border-radius: 25px;
     box-shadow: 10px 10px 20px;
@@ -76,15 +78,27 @@ aside nav ul li a:active,
 aside nav ul li a:hover {
     text-decoration: underline;
 }
-
-/* Center Section Structure */
-section#center {
+section#listing{
     content: "";
     display: table;
+    float: right;  
+}
+/* Div Grid Structure (images)*/
+div {
+    content: "";
+    display: block;
     float: left;
 }
 
-
+div.row{
+content: "";
+display: table;
+float:left;
+}
+div[class^="column"]{
+    content: "";
+    display: table;
+}
 figcaption {
     text-align: center;
     font-family: cursive;
@@ -99,10 +113,15 @@ section#top h1 {
 
 section#top {
     line-height: 1.3em;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
+footer:after{
+    content: "";
+    display: table;
+}
 footer {
     width: 100%;
-    background-color: red;
     text-align: center;
 }
