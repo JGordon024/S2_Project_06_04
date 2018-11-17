@@ -23,7 +23,7 @@ body {
     background-color: rgb(255, 211, 154);
     margin-right: auto;
     margin-left: auto;
-    width: 80%;
+    width: 85%;
     height: 100%;
 position: relative;
 }
@@ -36,7 +36,7 @@ header{
 header img{
     width:100%
 }
-
+/* Creates the horizontal nav */
 header>nav>ul>li {
     background-color: rgb(228, 203, 170);
     display: block;
@@ -47,7 +47,7 @@ header>nav>ul>li {
     margin-bottom: 10px;
     border: solid 2px;
 }
-
+/* Removes underline and makes text black */
 header nav ul a:link,
 header nav ul a:visited {
     text-decoration: none;
@@ -56,34 +56,39 @@ header nav ul a:visited {
 
 
 /* Aside Struction */
+/* Sets the text in the center, gives it a small portion of the body element, some spacing around the element, gives it a border,
+and does a stack overflow while floating it to the right side of the page */
 aside#listing {
-    display: block;
     text-align: center;
     width: 20%;
-    float: left;
-    margin: 30px 50px 0px 20px;
+    margin: 30px 30px 0px 20px;
     background: rgb(255, 197, 122);
     border-radius: 25px;
     box-shadow: 10px 10px 20px;
     border: outset gray 5px;
+    content: "";
+    float: right;
+    display: table;
+    padding-bottom: 10px;
+    padding-top: 5px;
 }
-
+aside#listing h2{
+    padding-top: 10px;
+}
+/* Sets the nav in the aside element the color black and removes underline */
 aside nav ul li a:link,
 aside nav ul li a:visited {
     text-decoration: none;
     color: black;
 }
-
+/* the nav nested inside the aside gets an underline when hovered above */
 aside nav ul li a:active,
 aside nav ul li a:hover {
     text-decoration: underline;
 }
-section#listing{
-    content: "";
-    display: table;
-    float: right;  
-}
+
 /* Div Grid Structure (images)*/
+/* Sets stack overflow */
 div {
     content: "";
     display: block;
@@ -94,10 +99,19 @@ div.row{
 content: "";
 display: table;
 float:left;
+
 }
+/* divs with the class of column in it have a margin on the right and left sides of it to give it some spacing */
 div[class^="column"]{
-    content: "";
-    display: table;
+margin: 0px 5px;
+}
+/* All divs with the class of column in it that are the first in a row have some space on the left */
+div[class^="column"]:first-of-type{
+    margin-left: 20px
+    }
+/* The text beneath the images are set in the center of the element and puts it in cursive */
+figure img{
+    border: outset 5px;
 }
 figcaption {
     text-align: center;
@@ -105,23 +119,35 @@ figcaption {
 }
 
 /*Top Section */
+/* Sets the size of the w */
+
+section {
+    background-color: rgb(255, 211, 154);
+}
+
 section#top h1 {
     font-size: 2em;
     text-align: center;
     margin-bottom: 10px;
 }
-
+/* Section at the top gets spacing and space between the lines of text get increased space */
 section#top {
     line-height: 1.3em;
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
-
-footer:after{
+/*Prevents container collapse, allows the footer to go into it's right positionr */
+section::after {
     content: "";
     display: table;
+    clear: both;
 }
+
+/* Footer structure */
+/* Lets the footer take full width of body element and puts the text in the center */
 footer {
     width: 100%;
     text-align: center;
+    background-color: rgb(228, 203, 170);
 }
